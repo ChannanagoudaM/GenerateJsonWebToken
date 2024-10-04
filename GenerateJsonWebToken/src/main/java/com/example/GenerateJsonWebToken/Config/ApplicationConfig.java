@@ -17,8 +17,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @RequiredArgsConstructor
 public class ApplicationConfig {
 
-
     private final UserRepo  userRepo;
+
+
     @Bean
     public UserDetailsService userDetailsService()
     {
@@ -36,7 +37,6 @@ public class ApplicationConfig {
         return authenticationProvider;
     }
 
-
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();
@@ -46,4 +46,6 @@ public class ApplicationConfig {
     {
         return new BCryptPasswordEncoder();
     }
+
+
 }

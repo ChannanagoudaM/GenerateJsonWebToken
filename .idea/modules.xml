@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/GenerateJsonWebToken.iml" filepath="$PROJECT_DIR$/.idea/GenerateJsonWebToken.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GenerateJsonWebToken/GenerateJsonWebToken.iml" filepath="$PROJECT_DIR$/GenerateJsonWebToken/GenerateJsonWebToken.iml" />
     </modules>
   </component>
 </project>

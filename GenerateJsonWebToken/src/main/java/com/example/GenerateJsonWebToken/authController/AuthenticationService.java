@@ -2,7 +2,6 @@ package com.example.GenerateJsonWebToken.authController;
 
 import com.example.GenerateJsonWebToken.Config.JwtService;
 import com.example.GenerateJsonWebToken.Details.Employees;
-import com.example.GenerateJsonWebToken.Details.Role;
 import com.example.GenerateJsonWebToken.RepositoryPackage.UserRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -30,7 +29,7 @@ public class AuthenticationService {
                 .name(request.getName())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
-                .role(Role.USER)
+                .role(request.getRole())
                 .build();
         userRepo.save(user);
         String token=service.generateToken(user);
@@ -53,4 +52,5 @@ public class AuthenticationService {
                 .token(token)
                 .build();
     }
+
 }
